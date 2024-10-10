@@ -1,13 +1,13 @@
 import { Menu } from "lucide-react";
-import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { SIDEBAR_ITEMS } from "@/data";
 import { useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
+import useSidebarState from "@/hooks/useSidebarState";
 
 const Sidebar = () => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const { isSidebarOpen, toggleSidebar } = useSidebarState();
   const location = useLocation();
 
   return (
@@ -19,8 +19,8 @@ const Sidebar = () => {
         <motion.button
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
-          onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-          className="p-2 transition-colors rounded-full max-w-fit hover:bg-gray-700"
+          onClick={toggleSidebar}
+          className="hidden p-2 transition-colors rounded-full max-w-fit hover:bg-gray-700 sm:block"
         >
           <Menu size={24} />
         </motion.button>
