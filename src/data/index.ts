@@ -215,6 +215,15 @@ export const categoryData = [
   { name: "Sports & Outdoors", value: 1900 },
 ];
 
+export const userGrowthData = [
+  { month: "Jan", users: 1000 },
+  { month: "Feb", users: 1500 },
+  { month: "Mar", users: 2000 },
+  { month: "Apr", users: 3000 },
+  { month: "May", users: 4000 },
+  { month: "Jun", users: 5000 },
+];
+
 export const COLORS = ["#6366F1", "#8B5CF6", "#EC4899", "#10B981", "#F59E0B"];
 
 export const SALES_CHANNEL_DATA = [
@@ -222,6 +231,14 @@ export const SALES_CHANNEL_DATA = [
   { name: "Mobile App", value: 38200 },
   { name: "Marketplace", value: 29800 },
   { name: "Social Media", value: 18700 },
+];
+
+export const userDemographicsData = [
+  { name: "18-24", value: 20 },
+  { name: "25-34", value: 30 },
+  { name: "35-44", value: 25 },
+  { name: "45-54", value: 15 },
+  { name: "55+", value: 10 },
 ];
 
 export const PRODUCT_TABLE_DATA = [
@@ -274,5 +291,43 @@ export const PRODUCT_TABLE_DATA = [
     price: 79.99,
     stock: 78,
     sales: 720,
+  },
+];
+
+export const USER_TABLE_DATA = [
+  {
+    id: 1,
+    name: "John Doe",
+    email: "john@example.com",
+    role: "Customer",
+    status: "Active",
+  },
+  {
+    id: 2,
+    name: "Jane Smith",
+    email: "jane@example.com",
+    role: "Admin",
+    status: "Active",
+  },
+  {
+    id: 3,
+    name: "Bob Johnson",
+    email: "bob@example.com",
+    role: "Customer",
+    status: "Inactive",
+  },
+  {
+    id: 4,
+    name: "Alice Brown",
+    email: "alice@example.com",
+    role: "Customer",
+    status: "Active",
+  },
+  {
+    id: 5,
+    name: "Charlie Wilson",
+    email: "charlie@example.com",
+    role: "Moderator",
+    status: "Active",
   },
 ];

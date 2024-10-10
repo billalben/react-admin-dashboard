@@ -11,31 +11,28 @@ import {
   Cell,
 } from "recharts";
 
-
 type TProps = {
   title: string;
-  SALES_CHANNEL_DATA: {
+  CHART_DATA: {
     name: string;
     value: number;
   }[];
   COLORS: string[];
 };
 
-const BarChartView = ({ title, SALES_CHANNEL_DATA, COLORS }: TProps) => {
+const BarChartView = ({ title, CHART_DATA, COLORS }: TProps) => {
   return (
     <motion.div
-      className="p-6 bg-gray-800 bg-opacity-50 border border-gray-700 shadow-lg rounded-xl backdrop-blur-md lg:col-span-2"
+      className="rounded-xl border border-gray-700 bg-gray-800 bg-opacity-50 p-6 shadow-lg backdrop-blur-md lg:col-span-2"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.4 }}
     >
-      <h2 className="mb-4 text-lg font-medium text-gray-100">
-        {title}
-      </h2>
+      <h2 className="mb-4 text-lg font-medium text-gray-100">{title}</h2>
 
-      <div className="h-80">
+      <div className="h-full max-h-96 min-h-80">
         <ResponsiveContainer>
-          <BarChart data={SALES_CHANNEL_DATA}>
+          <BarChart data={CHART_DATA}>
             <CartesianGrid strokeDasharray="3 3" stroke="#4B5563" />
             <XAxis dataKey="name" stroke="#9CA3AF" />
             <YAxis stroke="#9CA3AF" />
@@ -48,7 +45,7 @@ const BarChartView = ({ title, SALES_CHANNEL_DATA, COLORS }: TProps) => {
             />
             <Legend />
             <Bar dataKey={"value"} fill="#8884d8">
-              {SALES_CHANNEL_DATA.map((entry, index) => (
+              {CHART_DATA.map((_, index) => (
                 <Cell
                   key={`cell-${index}`}
                   fill={COLORS[index % COLORS.length]}

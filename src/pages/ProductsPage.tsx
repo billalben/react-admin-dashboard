@@ -29,7 +29,7 @@ const ProductsPage = () => {
           <LineChart
             title="Sales Trend"
             salesData={salesDataProducts}
-            dataKey="month"
+            dataKey={["month", "sales"]}
             strokes={["#374151", "#9CA3AF", "#9CA3AF", "#8B5CF6"]}
           />
           <PieChart

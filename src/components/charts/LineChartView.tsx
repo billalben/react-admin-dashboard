@@ -11,12 +11,13 @@ import { motion } from "framer-motion";
 
 type TProps = {
   title: string;
-  dataKey?: string;
+  dataKey: string[];
   strokes: string[];
   salesData: {
     month?: string;
     name?: string;
-    sales: number;
+    users?: number;
+    sales?: number;
   }[];
 };
 
@@ -34,7 +35,7 @@ const LineChartView = ({ title, salesData, dataKey, strokes }: TProps) => {
         <ResponsiveContainer width={"100%"} height={"100%"}>
           <LineChart data={salesData}>
             <CartesianGrid strokeDasharray="3 3" stroke={strokes[0]} />
-            <XAxis dataKey={dataKey} stroke={strokes[1]} />
+            <XAxis dataKey={dataKey[0]} stroke={strokes[1]} />
             <YAxis stroke={strokes[2]} />
             <Tooltip
               contentStyle={{
@@ -45,10 +46,10 @@ const LineChartView = ({ title, salesData, dataKey, strokes }: TProps) => {
             />
             <Line
               type="monotone"
-              dataKey="sales"
+              dataKey={dataKey[1]}
               stroke={strokes[3]}
               strokeWidth={2}
-              dot={{ fill: "#6366F1", strokeWidth: 2, r: 6 }}
+              dot={{ fill: "#6366F1", strokeWidth: 2, r: 4 }}
               activeDot={{ r: 8, strokeWidth: 2 }}
             />
           </LineChart>

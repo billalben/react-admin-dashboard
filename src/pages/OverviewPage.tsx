@@ -32,7 +32,7 @@ const OverviewPage = () => {
           <LineChart
             title="Sales Overview"
             salesData={salesDataOverview}
-            dataKey="name"
+            dataKey={["name", "sales"]}
             strokes={["#4B5563", "#9CA3AF", "#9CA3AF", "#6366F1"]}
           />
           <PieChart
@@ -43,7 +43,7 @@ const OverviewPage = () => {
           <BarChart
             title="Sales by Channel"
             COLORS={COLORS}
-            SALES_CHANNEL_DATA={SALES_CHANNEL_DATA}
+            CHART_DATA={SALES_CHANNEL_DATA}
           />
         </div>
       </main>

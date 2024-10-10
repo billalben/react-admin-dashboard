@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import {
   PieChart,
@@ -15,20 +16,27 @@ type TProps = {
     value: number;
   }[];
   COLORS: string[];
-}
+  colSpan?: boolean;
+};
 
-const PieChartView = ({title, categoryData, COLORS}: TProps) => {
+const PieChartView = ({
+  title,
+  categoryData,
+  COLORS,
+  colSpan = false,
+}: TProps) => {
   return (
     <motion.div
-      className="p-6 bg-gray-800 bg-opacity-50 border border-gray-700 shadow-lg rounded-xl backdrop-blur-md"
+      className={cn(
+        "rounded-xl border border-gray-700 bg-gray-800 bg-opacity-50 p-6 shadow-lg backdrop-blur-md",
+        colSpan ? "lg:col-span-2" : "",
+      )}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.3 }}
     >
-      <h2 className="mb-4 text-lg font-medium text-gray-100">
-        {title}
-      </h2>
-      <div className="h-80">
+      <h2 className="mb-4 text-lg font-medium text-gray-100">{title}</h2>
+      <div className="h-full max-h-96 min-h-80">
         <ResponsiveContainer width={"100%"} height={"100%"}>
           <PieChart>
             <Pie
@@ -43,7 +51,7 @@ const PieChartView = ({title, categoryData, COLORS}: TProps) => {
                 `${name} ${(percent * 100).toFixed(0)}%`
               }
             >
-              {categoryData.map((entry, index) => (
+              {categoryData.map((_, index) => (
                 <Cell
                   key={`cell-${index}`}
                   fill={COLORS[index % COLORS.length]}
