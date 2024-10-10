@@ -1,7 +1,9 @@
 import { Header } from "@/components/common";
 import { motion } from "framer-motion";
 import StatCard from "@/components/common/StatCard";
-import { PRODUCT_STATS } from "@/data";
+import { categoryData, COLORS, PRODUCT_STATS, salesDataProducts } from "@/data";
+import ProductsTable from "@/components/products/ProductsTable";
+import { LineChart, PieChart } from "@/components/charts";
 
 const ProductsPage = () => {
   return (
@@ -19,6 +21,23 @@ const ProductsPage = () => {
             <StatCard key={stat.id} {...stat} />
           ))}
         </motion.div>
+
+        <ProductsTable />
+
+        {/* CHARTS */}
+        <div className="grid-col-1 grid gap-8 lg:grid-cols-2">
+          <LineChart
+            title="Sales Trend"
+            salesData={salesDataProducts}
+            dataKey="month"
+            strokes={["#374151", "#9CA3AF", "#9CA3AF", "#8B5CF6"]}
+          />
+          <PieChart
+            title="Category Distribution"
+            COLORS={COLORS}
+            categoryData={categoryData}
+          />
+        </div>
       </main>
     </div>
   );

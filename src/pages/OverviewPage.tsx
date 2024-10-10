@@ -3,7 +3,7 @@ import StatCard from "@/components/common/StatCard";
 import { PieChart, BarChart, LineChart } from "@/components/charts";
 import {
   OVERVIEW_STATS,
-  salesData,
+  salesDataOverview,
   categoryData,
   COLORS,
   SALES_CHANNEL_DATA,
@@ -15,9 +15,9 @@ const OverviewPage = () => {
     <div className="relative z-10 flex-1 overflow-auto">
       <Header title="Overview" />
 
-      <main className="mx-auto max-w-7xl px-4 py-6 lg:px-8">
+      <main className="px-4 py-6 mx-auto max-w-7xl lg:px-8">
         <motion.div
-          className="mb-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4"
+          className="grid gap-4 mb-8 sm:grid-cols-2 lg:grid-cols-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
@@ -29,7 +29,12 @@ const OverviewPage = () => {
 
         {/* CHART */}
         <div className="grid gap-8 lg:grid-cols-2">
-          <LineChart title="Sales Overview" salesData={salesData} />
+          <LineChart
+            title="Sales Overview"
+            salesData={salesDataOverview}
+            dataKey="name"
+            strokes={["#4B5563", "#9CA3AF", "#9CA3AF", "#6366F1"]}
+          />
           <PieChart
             title="Category Distribution"
             categoryData={categoryData}

@@ -183,7 +183,7 @@ export const USER_STATS = [
   },
 ];
 
-export const salesData = [
+export const salesDataOverview = [
   { name: "Jul", sales: 4200 },
   { name: "Aug", sales: 3800 },
   { name: "Sep", sales: 5100 },
@@ -198,6 +198,15 @@ export const salesData = [
   { name: "Jun", sales: 7500 },
 ];
 
+export const salesDataProducts = [
+  { month: "Jan", sales: 4000 },
+  { month: "Feb", sales: 3000 },
+  { month: "Mar", sales: 5000 },
+  { month: "Apr", sales: 4500 },
+  { month: "May", sales: 6000 },
+  { month: "Jun", sales: 5500 },
+];
+
 export const categoryData = [
   { name: "Electronics", value: 4500 },
   { name: "Clothing", value: 3200 },
@@ -209,8 +218,61 @@ export const categoryData = [
 export const COLORS = ["#6366F1", "#8B5CF6", "#EC4899", "#10B981", "#F59E0B"];
 
 export const SALES_CHANNEL_DATA = [
-	{ name: "Website", value: 45600 },
-	{ name: "Mobile App", value: 38200 },
-	{ name: "Marketplace", value: 29800 },
-	{ name: "Social Media", value: 18700 },
+  { name: "Website", value: 45600 },
+  { name: "Mobile App", value: 38200 },
+  { name: "Marketplace", value: 29800 },
+  { name: "Social Media", value: 18700 },
+];
+
+export const PRODUCT_TABLE_DATA = [
+  {
+    id: 1,
+    name: "Wireless Earbuds",
+    category: "Electronics",
+    image:
+      "https://images.unsplash.com/photo-1627989580309-bfaf3e58af6f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8d2lyZWxlc3MlMjBlYXJidWRzfGVufDB8fDB8fHww",
+    price: 59.99,
+    stock: 143,
+    sales: 1200,
+  },
+  {
+    id: 2,
+    name: "Leather Wallet",
+    category: "Accessories",
+    image:
+      "https://images.unsplash.com/photo-1570549667552-8a73ebf96469?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fExlYXRoZXIlMjBXYWxsZXR8ZW58MHx8MHx8fDA%3D",
+    price: 39.99,
+    stock: 89,
+    sales: 800,
+  },
+  {
+    id: 3,
+    name: "Smart Watch",
+    category: "Electronics",
+    image:
+      "https://images.unsplash.com/photo-1698729616509-060e8f58e6c0?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fFNtYXJ0JTIwV2F0Y2h8ZW58MHx8MHx8fDA%3D",
+    price: 199.99,
+    stock: 56,
+    sales: 650,
+  },
+  {
+    id: 4,
+    name: "Yoga Mat",
+    category: "Fitness",
+    image:
+      "https://plus.unsplash.com/premium_photo-1667739346017-fbc9cd35d666?q=80&w=2938&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    price: 29.99,
+    stock: 210,
+    sales: 950,
+  },
+  {
+    id: 5,
+    name: "Coffee Maker",
+    category: "Home",
+    image:
+      "https://plus.unsplash.com/premium_photo-1661722983090-11783531c332?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    price: 79.99,
+    stock: 78,
+    sales: 720,
+  },
 ];
