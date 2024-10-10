@@ -12,10 +12,8 @@ const Sidebar = () => {
 
   return (
     <motion.div
-      className={`relative z-10 flex-shrink-0 transition-all duration-300 ease-out ${
-        isSidebarOpen ? "w-52" : "w-20"
-      }`}
-      animate={{ width: isSidebarOpen ? 256 : 80 }}
+      className="relative z-10 flex-shrink-0 transition-all duration-300 ease-out"
+      animate={{ width: isSidebarOpen ? 208 : 80 }}
     >
       <div className="flex flex-col h-full gap-8 p-4 bg-gray-800 bg-opacity-50 border-r border-gray-700 backdrop-blur-md">
         <motion.button
@@ -32,14 +30,17 @@ const Sidebar = () => {
             <Link key={item.href} to={item.href}>
               <motion.div
                 className={cn(
-                  "mb-2 flex gap-4 items-center rounded-lg p-4 text-sm font-medium transition-colors hover:bg-gray-700",
+                  "mb-2 flex items-center gap-4 rounded-lg p-4 text-sm font-medium transition-colors hover:bg-gray-700",
                   location.pathname === item.href && "bg-gray-700",
                 )}
               >
                 <item.icon
                   size={20}
                   style={{ color: item.color }}
-                  className={cn("shrink-0 transition-transform", !isSidebarOpen && "-translate-x-1")}
+                  className={cn(
+                    "shrink-0 transition-transform",
+                    !isSidebarOpen && "-translate-x-1",
+                  )}
                 />
                 <AnimatePresence>
                   {isSidebarOpen && (
