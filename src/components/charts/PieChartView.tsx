@@ -11,7 +11,7 @@ import {
 
 type TProps = {
   title: string;
-  categoryData: {
+  chartData: {
     name: string;
     value: number;
   }[];
@@ -21,7 +21,7 @@ type TProps = {
 
 const PieChartView = ({
   title,
-  categoryData,
+  chartData,
   COLORS,
   colSpan = false,
 }: TProps) => {
@@ -35,12 +35,13 @@ const PieChartView = ({
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.3 }}
     >
-      <h2 className="mb-4 text-lg font-medium text-gray-100">{title}</h2>
+      <h2 className="mb-4 text-xl font-semibold text-gray-100">{title}</h2>
+
       <div className="h-full max-h-96 min-h-80">
         <ResponsiveContainer width={"100%"} height={"100%"}>
           <PieChart>
             <Pie
-              data={categoryData}
+              data={chartData}
               cx={"50%"}
               cy={"50%"}
               labelLine={false}
@@ -51,7 +52,7 @@ const PieChartView = ({
                 `${name} ${(percent * 100).toFixed(0)}%`
               }
             >
-              {categoryData.map((_, index) => (
+              {chartData.map((_, index) => (
                 <Cell
                   key={`cell-${index}`}
                   fill={COLORS[index % COLORS.length]}

@@ -23,12 +23,12 @@ type TProps = {
 const BarChartView = ({ title, CHART_DATA, COLORS }: TProps) => {
   return (
     <motion.div
-      className="rounded-xl border border-gray-700 bg-gray-800 bg-opacity-50 p-6 shadow-lg backdrop-blur-md lg:col-span-2"
+      className="p-6 bg-gray-800 bg-opacity-50 border border-gray-700 shadow-lg rounded-xl backdrop-blur-md lg:col-span-2"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.4 }}
     >
-      <h2 className="mb-4 text-lg font-medium text-gray-100">{title}</h2>
+      <h2 className="mb-4 text-xl font-semibold text-gray-100">{title}</h2>
 
       <div className="h-full max-h-96 min-h-80">
         <ResponsiveContainer>

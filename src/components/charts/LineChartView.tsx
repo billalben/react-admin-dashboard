@@ -29,7 +29,7 @@ const LineChartView = ({ title, salesData, dataKey, strokes }: TProps) => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.2 }}
     >
-      <h2 className="mb-4 text-lg font-medium text-gray-100">{title}</h2>
+      <h2 className="mb-4 text-xl font-semibold text-gray-100">{title}</h2>
 
       <div className="h-full min-h-80 max-h-96">
         <ResponsiveContainer width={"100%"} height={"100%"}>

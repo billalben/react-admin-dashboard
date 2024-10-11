@@ -35,7 +35,7 @@ const ProductsPage = () => {
           <PieChart
             title="Category Distribution"
             COLORS={COLORS}
-            categoryData={categoryData}
+            chartData={categoryData}
           />
         </div>
       </main>

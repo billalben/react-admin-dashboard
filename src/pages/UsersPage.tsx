@@ -41,7 +41,7 @@ const UsersPage = () => {
 
           <PieChart
             title="User Demographics"
-            categoryData={userDemographicsData}
+            chartData={userDemographicsData}
             COLORS={COLORS}
             colSpan={true}
           />

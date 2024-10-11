@@ -37,7 +37,7 @@ const OverviewPage = () => {
           />
           <PieChart
             title="Category Distribution"
-            categoryData={categoryData}
+            chartData={categoryData}
             COLORS={COLORS}
           />
           <BarChart
