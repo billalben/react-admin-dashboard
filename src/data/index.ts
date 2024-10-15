@@ -349,3 +349,20 @@ export const salesByCategory = [
   { name: "Books", value: 100 },
   { name: "Others", value: 150 },
 ];
+
+export const orderStatusData = [
+  { name: "Pending", value: 30 },
+  { name: "Processing", value: 45 },
+  { name: "Shipped", value: 60 },
+  { name: "Delivered", value: 120 },
+];
+
+export const dailyOrdersData = [
+  { date: "07/01", orders: 45 },
+  { date: "07/02", orders: 52 },
+  { date: "07/03", orders: 49 },
+  { date: "07/04", orders: 60 },
+  { date: "07/05", orders: 55 },
+  { date: "07/06", orders: 58 },
+  { date: "07/07", orders: 62 },
+];

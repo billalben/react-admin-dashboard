@@ -13,15 +13,18 @@ type TProps = {
   title: string;
   dataKey: string[];
   strokes: string[];
-  salesData: {
+  chartData: {
     month?: string;
     name?: string;
     users?: number;
     sales?: number;
+    value?: number;
+    date?: string;
+    orders?: number;
   }[];
 };
 
-const LineChartView = ({ title, salesData, dataKey, strokes }: TProps) => {
+const LineChartView = ({ title, chartData, dataKey, strokes }: TProps) => {
   return (
     <motion.div
       className="p-6 bg-gray-800 bg-opacity-50 border border-gray-700 shadow-lg rounded-xl backdrop-blur-md"
@@ -33,7 +36,7 @@ const LineChartView = ({ title, salesData, dataKey, strokes }: TProps) => {
 
       <div className="h-full min-h-80 max-h-96">
         <ResponsiveContainer width={"100%"} height={"100%"}>
-          <LineChart data={salesData}>
+          <LineChart data={chartData}>
             <CartesianGrid strokeDasharray="3 3" stroke={strokes[0]} />
             <XAxis dataKey={dataKey[0]} stroke={strokes[1]} />
             <YAxis stroke={strokes[2]} />

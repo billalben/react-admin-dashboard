@@ -31,7 +31,7 @@ const OverviewPage = () => {
         <div className="grid gap-8 lg:grid-cols-2">
           <LineChart
             title="Sales Overview"
-            salesData={salesDataOverview}
+            chartData={salesDataOverview}
             dataKey={["name", "sales"]}
             strokes={["#4B5563", "#9CA3AF", "#9CA3AF", "#6366F1"]}
           />

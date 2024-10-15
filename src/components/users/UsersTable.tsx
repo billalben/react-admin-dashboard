@@ -5,6 +5,8 @@ import { Search } from "lucide-react";
 import { USER_TABLE_DATA } from "@/data";
 import toast from "react-hot-toast";
 
+const thData = ["Name", "Email", "Role", "Status", "Actions"];
+
 const UsersTable = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredUsers, setFilteredUsers] = useState(USER_TABLE_DATA);
@@ -58,21 +60,14 @@ const UsersTable = () => {
         <table className="min-w-full divide-y divide-gray-700">
           <thead>
             <tr>
-              <th className="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-400 uppercase">
-                Name
-              </th>
-              <th className="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-400 uppercase">
-                Email
-              </th>
-              <th className="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-400 uppercase">
-                Role
-              </th>
-              <th className="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-400 uppercase">
-                Status
-              </th>
-              <th className="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-400 uppercase">
-                Actions
-              </th>
+              {thData.map((tHeading, index) => (
+                <th
+                  key={index}
+                  className="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-400 uppercase"
+                >
+                  {tHeading}
+                </th>
+              ))}
             </tr>
           </thead>
 

@@ -28,7 +28,7 @@ const ProductsPage = () => {
         <div className="grid-col-1 grid gap-8 lg:grid-cols-2">
           <LineChart
             title="Sales Trend"
-            salesData={salesDataProducts}
+            chartData={salesDataProducts}
             dataKey={["month", "sales"]}
             strokes={["#374151", "#9CA3AF", "#9CA3AF", "#8B5CF6"]}
           />

@@ -7,6 +7,8 @@ import { cn } from "@/lib/utils";
 
 import toast from "react-hot-toast";
 
+const thData = ["Name", "Category", "Price", "Stock", "Sales", "Actions"];
+
 const ProductsTable = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [isFocused, setIsFocused] = useState(false);
@@ -70,24 +72,14 @@ const ProductsTable = () => {
         <table className="min-w-full divide-y divide-gray-700">
           <thead>
             <tr>
-              <th className="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-400 uppercase">
-                Name
-              </th>
-              <th className="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-400 uppercase">
-                Category
-              </th>
-              <th className="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-400 uppercase">
-                Price
-              </th>
-              <th className="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-400 uppercase">
-                Stock
-              </th>
-              <th className="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-400 uppercase">
-                Sales
-              </th>
-              <th className="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-400 uppercase">
-                Actions
-              </th>
+              {thData.map((tHeading, index) => (
+                <th
+                  key={index}
+                  className="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-400 uppercase"
+                >
+                  {tHeading}
+                </th>
+              ))}
             </tr>
           </thead>
 

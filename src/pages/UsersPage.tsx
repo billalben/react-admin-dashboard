@@ -33,7 +33,7 @@ const UsersPage = () => {
         <div className="grid gap-6 mt-8 lg:grid-cols-2">
           <LineChart
             title="User Growth"
-            salesData={userGrowthData}
+            chartData={userGrowthData}
             strokes={["#374151", "#9CA3AF", "#9CA3AF", "#8B5CF6"]}
             dataKey={["month", "users"]}
           />
