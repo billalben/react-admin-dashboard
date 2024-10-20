@@ -16,6 +16,7 @@ import {
   UserCheck,
   UserPlus,
   UserX,
+  Eye,
 } from "lucide-react";
 
 export const SIDEBAR_ITEMS = [
@@ -365,4 +366,68 @@ export const dailyOrdersData = [
   { date: "07/05", orders: 55 },
   { date: "07/06", orders: 58 },
   { date: "07/07", orders: 62 },
+];
+
+export const overviewData = [
+  { name: "Revenue", value: "$1,234,567", change: 12.5, icon: DollarSign },
+  { name: "Users", value: "45,678", change: 8.3, icon: Users },
+  { name: "Orders", value: "9,876", change: -3.2, icon: ShoppingBag },
+  { name: "Page Views", value: "1,234,567", change: 15.7, icon: Eye },
+];
+
+export const revenueData = [
+  { month: "Jan", revenue: 4000, target: 3800 },
+  { month: "Feb", revenue: 3000, target: 3200 },
+  { month: "Mar", revenue: 5000, target: 4500 },
+  { month: "Apr", revenue: 4500, target: 4200 },
+  { month: "May", revenue: 6000, target: 5500 },
+  { month: "Jun", revenue: 5500, target: 5800 },
+  { month: "Jul", revenue: 7000, target: 6500 },
+];
+
+export const INSIGHTS = [
+  {
+    icon: TrendingUp,
+    color: "text-green-500",
+    insight:
+      "Revenue is up 15% compared to last month, driven primarily by a successful email campaign.",
+  },
+  {
+    icon: Users,
+    color: "text-blue-500",
+    insight:
+      "Customer retention has improved by 8% following the launch of the new loyalty program.",
+  },
+  {
+    icon: ShoppingBag,
+    color: "text-purple-500",
+    insight:
+      'Product category "Electronics" shows the highest growth potential based on recent market trends.',
+  },
+  {
+    icon: DollarSign,
+    color: "text-yellow-500",
+    insight:
+      "Optimizing pricing strategy could potentially increase overall profit margins by 5-7%.",
+  },
+];
+
+export const channelData = [
+  { name: "Organic Search", value: 4000 },
+  { name: "Paid Search", value: 3000 },
+  { name: "Direct", value: 2000 },
+  { name: "Social Media", value: 2780 },
+  { name: "Referral", value: 1890 },
+  { name: "Email", value: 2390 },
+];
+
+export const userRetentionData = [
+  { name: "Week 1", retention: 100 },
+  { name: "Week 2", retention: 75 },
+  { name: "Week 3", retention: 60 },
+  { name: "Week 4", retention: 50 },
+  { name: "Week 5", retention: 45 },
+  { name: "Week 6", retention: 40 },
+  { name: "Week 7", retention: 38 },
+  { name: "Week 8", retention: 35 },
 ];

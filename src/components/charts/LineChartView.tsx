@@ -21,6 +21,7 @@ type TProps = {
     value?: number;
     date?: string;
     orders?: number;
+    retention?: number;
   }[];
 };
 

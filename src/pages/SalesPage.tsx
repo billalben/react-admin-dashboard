@@ -22,7 +22,7 @@ const SalesPage = () => {
           ))}
         </motion.div>
 
-        <AreaChart title="Sales Overview" chartData={monthlySalesData} />
+        <AreaChart title="Sales Overview" chartData={monthlySalesData} dataKey={["month", "sales"]} />
 
         <div className="grid gap-8 mb-8 lg:grid-cols-2">
           <PieChart
