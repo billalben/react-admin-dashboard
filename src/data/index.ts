@@ -431,3 +431,24 @@ export const userRetentionData = [
   { name: "Week 7", retention: 38 },
   { name: "Week 8", retention: 35 },
 ];
+
+export const accountInfo = [
+  {
+    id: 1,
+    name: "Google",
+    connected: true,
+    icon: "/google.png",
+  },
+  {
+    id: 2,
+    name: "Facebook",
+    connected: false,
+    icon: "/facebook.svg",
+  },
+  {
+    id: 3,
+    name: "Twitter",
+    connected: true,
+    icon: "/x.png",
+  },
+];

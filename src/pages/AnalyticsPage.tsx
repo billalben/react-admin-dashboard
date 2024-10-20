@@ -18,7 +18,7 @@ const AnalyticsPage = () => {
     <div className="relative z-10 flex-1 overflow-auto bg-gray-900">
       <Header title={"Analytics Dashboard"} />
 
-      <main className="px-4 py-6 mx-auto max-w-7xl lg:px-8">
+      <main className="px-4 py-6 mx-auto mt-20 max-w-7xl lg:px-8">
         <OverviewCards overviewData={overviewData} />
         <AreaChart
           title="Revenue vs Target"

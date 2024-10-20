@@ -10,9 +10,9 @@ const ProductsPage = () => {
     <div className="relative z-10 flex-1 overflow-auto">
       <Header title="Products" />
 
-      <main className="mx-auto max-w-7xl px-4 py-6 lg:px-8">
+      <main className="px-4 py-6 mx-auto mt-20 max-w-7xl lg:px-8">
         <motion.div
-          className="mb-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4"
+          className="grid gap-4 mb-8 sm:grid-cols-2 lg:grid-cols-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
@@ -25,7 +25,7 @@ const ProductsPage = () => {
         <ProductsTable />
 
         {/* CHARTS */}
-        <div className="grid-col-1 grid gap-8 lg:grid-cols-2">
+        <div className="grid gap-8 grid-col-1 lg:grid-cols-2">
           <LineChart
             title="Sales Trend"
             chartData={salesDataProducts}

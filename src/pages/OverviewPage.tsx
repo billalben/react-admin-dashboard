@@ -15,7 +15,7 @@ const OverviewPage = () => {
     <div className="relative z-10 flex-1 overflow-auto">
       <Header title="Overview" />
 
-      <main className="px-4 py-6 mx-auto max-w-7xl lg:px-8">
+      <main className="px-4 py-6 mx-auto mt-20 max-w-7xl lg:px-8">
         <motion.div
           className="grid gap-4 mb-8 sm:grid-cols-2 lg:grid-cols-4"
           initial={{ opacity: 0, y: 20 }}
